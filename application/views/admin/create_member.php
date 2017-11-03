@@ -14,15 +14,15 @@
                             <div class="row">
                                 <div class="col-xs-6 col-md-6">
                                     <label class="required">First name</label>
-                                    <input type="text" name="firstname" value="" class="form-control input-sm" placeholder="First Name"  />
+                                    <input type="text" name="firstname" value="<?php echo set_value('firstname'); ?>" class="form-control input-sm" placeholder="First Name"  />
                                 </div>
                                 <div class="col-xs-6 col-md-6">
                                     <label class="required">Middle name</label>
-                                    <input type="text" name="middlename" value="" class="form-control input-sm" placeholder="Middle Name"  />
+                                    <input type="text" name="middlename" value="<?php echo set_value('middlename'); ?>" class="form-control input-sm" placeholder="Middle Name"  />
                                 </div>
                                 <div class="col-xs-12 col-md-12">
                                     <label class="required">Last name</label>
-                                    <input type="text" name="lastname" value="" class="form-control input-sm" placeholder="Last Name"  />
+                                    <input type="text" name="lastname" value="<?php echo set_value('lastname'); ?>" class="form-control input-sm" placeholder="Last Name"  />
                                 </div>
                             </div>
                             <label>Gender : </label>
@@ -67,11 +67,11 @@
                                 
                                 <div class="col-md-6">
                                     <label class="required">Start date:</label>
-                                    <input type="text" name="start_date" class="form-control input-sm datepicker"/>
+                                    <input type="text" name="start_date" value="<?php echo set_value('start_date'); ?>" class="form-control input-sm datepicker"/>
                                 </div>
                                 <div class="col-md-6">
                                     <label class="required">Expire date</label>
-                                    <input type="text" name="end_date" class="form-control input-sm datepicker"/>
+                                    <input type="text" name="end_date" value="<?php echo set_value('end_date'); ?>" class="form-control input-sm datepicker"/>
                                 </div>
                             </div>
                             <div class="row">
@@ -80,11 +80,11 @@
                                 </div>
                                 <div class="col-md-6">
                                     <label class="required">Paid amount</label>
-                                    <input type="text" name="paid" class="form-control input-sm"/>
+                                    <input type="text" name="paid" value="<?php echo set_value('paid'); ?>" class="form-control input-sm"/>
                                 </div>
                                 <div class="col-md-6">
                                     <label>Unpaid amount</label>
-                                    <input type="text" name="unpaid" class="form-control input-sm"/>
+                                    <input type="text" name="unpaid" value="<?php echo set_value('unpaid'); ?>" class="form-control input-sm"/>
                                 </div>
                                 <div class="col-md-12">
                                     <label>Next installment alert</label>
@@ -118,7 +118,7 @@
             data: data
         }).done(function (html) {
             $('.ajaxResponse').html(html);
-            $('#frm_create_member')[0].reset();
+            //$('#frm_create_member')[0].reset();
             
         });
     });

@@ -27,10 +27,10 @@ class Admin extends CI_Controller {
             
             if($this->session->userdata('role') == 'admin'){
             $this->form_validation->set_rules('firstname', 'First name ', 'required');
-            $this->form_validation->set_rules('middlename', 'Middle name ', 'required');
+            //$this->form_validation->set_rules('middlename', 'Middle name ', 'required');
             $this->form_validation->set_rules('lastname', 'Last name', 'required');
             $this->form_validation->set_rules('area', 'Area/Town/City', 'required');
-            $this->form_validation->set_rules('telephone', 'Telephone', 'required|min_length[10]|max_length[10]|numeric');
+            //$this->form_validation->set_rules('telephone', 'Telephone', 'required|min_length[10]|max_length[10]|numeric');
 
             $this->form_validation->set_rules('plan', 'Package type', 'required');
             $this->form_validation->set_rules('tariff', 'Selected period', 'required');
@@ -43,7 +43,7 @@ class Admin extends CI_Controller {
             } else {
 //                        general information
                 $family['firstname'] = $this->input->post('firstname');
-                $family['middlename'] = $this->input->post('middlename');
+                //$family['middlename'] = $this->input->post('middlename');
                 $family['lastname'] = $this->input->post('lastname');
                 $family['gender'] = $this->input->post('gender');
                 $family['address'] = $this->input->post('address');
